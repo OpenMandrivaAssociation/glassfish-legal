@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name:          glassfish-legal
 Version:       1.1
 Release:       3.0%{?dist}
@@ -37,3 +37,14 @@ cp -p src/main/resources/META-INF/LICENSE.txt .
 
 %files -f .mfiles
 %doc LICENSE.txt
+
+%changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Mon Jul 08 2013 gil cattaneo <puntogil@libero.it> 1.1-2
+- switch to XMvn
+- minor changes to adapt to current guideline
+
+* Wed Jan 16 2013 gil cattaneo <puntogil@libero.it> 1.1-1
+- initial rpm
